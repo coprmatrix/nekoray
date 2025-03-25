@@ -1,0 +1,15 @@
+<services>
+ <service name="download_url">
+   <param name="url">https://api.github.com/repos/Mahdi-zarei/nekoray/releases/latest</param> 
+ </service>
+ <service name="set_version">
+   <param name="fromfile">_service:download_url:latest</param>
+   <param name="regex">.*"tag_name"\s*:\s*"(.*)"</param>
+ </service>
+ <service name="download_files" />
+  <!--service name="format_cmake" mode="buildtime">
+    <param name="cmake-directory">dwarfs</param>
+    <param name="file">dwarfs.spec</param>
+  </service-->
+
+</services>

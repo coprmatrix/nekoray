@@ -21,6 +21,7 @@ BuildRequires: cmake(cpr)
 BuildRequires: cmake(Qt6)
 BuildRequires: cmake(Qt6Svg)
 BuildRequires: cmake(Qt6Linguist)
+BuildRequires: cmake(Qt6Charts)
 BuildRequires: patchelf
 
 %description

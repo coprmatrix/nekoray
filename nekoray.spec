@@ -31,6 +31,7 @@ BuildRequires: sed
 %prep
 %autosetup -p1 -n %{name}-%{version}
 sed -i 's~find_package(Protobuf CONFIG REQUIRED)~find_package(Protobuf REQUIRED)~' cmake/myproto.cmake
+sed -i 's~ImageFormat::BGRA~ImageFormat::BGR~' 3rdparty/ZxingQtReader.hpp
 
 %build
 %cmake

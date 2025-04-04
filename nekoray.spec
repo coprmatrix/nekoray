@@ -6,7 +6,6 @@ URL: https://github.com/Mahdi-zarei/nekoray
 License: GPLv3
 
 Source0: https://github.com/Mahdi-zarei/nekoray/archive/refs/tags/%{version}.tar.gz#/%{name}-%{version}.tar.gz
-Patch0:  huakim-fix.patch
 
 BuildRequires: rpm_macro(cmake)
 BuildRequires: rpm_macro(cmake_build)

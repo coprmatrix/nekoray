@@ -23,13 +23,14 @@ BuildRequires: cmake(Qt6Svg)
 BuildRequires: cmake(Qt6Linguist)
 BuildRequires: cmake(Qt6Charts)
 BuildRequires: patchelf
+BuildRequires: sed
 
 %description
 %{summary}
 
 %prep
 %autosetup -p1 -n %{name}-%{version}
-
+sed -i 's~find_package(Protobuf CONFIG REQUIRED)~find_package(Protobuf REQUIRED)~' cmake/myproto.cmake
 
 %build
 %cmake

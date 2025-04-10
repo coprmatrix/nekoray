@@ -6,10 +6,8 @@
    <param name="fromfile">_service:download_url:latest</param>
    <param name="regex">.*"tag_name"\s*:\s*"(.*)"</param>
  </service>
- <service name="download_files" />
-  <!--service name="format_cmake" mode="buildtime">
-    <param name="cmake-directory">dwarfs</param>
-    <param name="file">dwarfs.spec</param>
-  </service-->
-
+ <service name="download_files"/>
+ <service name="run">
+   <param name="command">source run.sh</param>
+ </service>
 </services>

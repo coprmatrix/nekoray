@@ -1,5 +1,5 @@
 ver=$(cat '_service:set_version:nekoray.spec' | sed -n 's~Version: ~~p;')
-curl "https://github.com/bunzuhbu/nekoray/releases/download/${ver}/nekoray-${ver}.tar.gz" -o "${outdir}/nekoray-${ver}.tar.gz"
+curl -L "https://github.com/Mahdi-zarei/nekoray/archive/refs/tags/${ver}.tar.gz" -o "${outdir}/nekoray-${ver}.tar.gz"
 tar -xzf "${outdir}/nekoray-${ver}.tar.gz" --directory "${outdir}"
 pushd "${outdir}"
 pushd "nekoray-${ver}/core/server"

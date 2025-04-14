@@ -1,5 +1,6 @@
 ver=$(cat '_service:set_version:nekoray.spec' | sed -n 's~Version: ~~p;')
-tar -xzf ./*nekoray-$ver.tar.gz --directory "${outdir}"
+curl "https://github.com/bunzuhbu/nekoray/releases/download/${ver}/nekoray-${ver}.tar.gz" -o "${outdir}/nekoray-${ver}.tar.gz"
+tar -xzf "${outdir}/nekoray-${ver}.tar.gz" --directory "${outdir}"
 pushd "${outdir}"
 pushd "nekoray-${ver}/core/server"
 go mod vendor

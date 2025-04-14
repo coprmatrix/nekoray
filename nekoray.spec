@@ -5,11 +5,9 @@ Summary: Qt based cross-platform GUI proxy configuration manager (backend: sing-
 URL: https://github.com/Mahdi-zarei/nekoray
 License: GPLv3
 
-Source0: https://github.com/Mahdi-zarei/nekoray/archive/refs/tags/%{version}.tar.gz#/%{name}-%{version}.tar.gz
-# cd nekoray-%{version}/core/server; go mod vendor; mv vendor ../../../; cd ../../../; tar -czf vendor-%{version}.tar.gz vendor;
-Source1: vendor-%{version}.tar.gz
-# curl https://api.github.com/repos/sagernet/sing-box/releases/latest | jq -r '.name' > Sagernet.SingBox.Version
-Source2: Sagernet.SingBox.Version
+Source0: https://github.com/bunzuhbu/nekoray/releases/download/%{version}/nekoray-%{version}.tar.gz
+Source1: https://github.com/bunzuhbu/nekoray/releases/download/%{version}/vendor-%{version}.tar.gz
+Source2: https://github.com/bunzuhbu/nekoray/releases/download/%{version}/NekoRay-%{version}.Sagernet.SingBox.Version.txt
 Source3: %{name}.desktop
 Source4: %{name}.sh
 Source100: run.sh

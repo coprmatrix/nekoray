@@ -70,7 +70,6 @@ cp %{SOURCE4} %{buildroot}%{_bindir}/%{name}
 cp %{SOURCE3} %{buildroot}%{_datadir}/applications/%{name}.desktop
 sed -i 's~/bin~%{_bindir}~g;s~/usr/share~%{_datadir}~g;s~nekoray~%{name}~g' %{buildroot}%{_datadir}/applications/%{name}.desktop
 sed -i 's~/bin~%{_bindir}~g;s~/lib64~%{_libdir}~g;s~nekoray~%{name}~g' %{buildroot}%{_bindir}/%{name}
-cp %{__cmake_builddir}/lib*.so.* %{buildroot}%{_libdir}/
 cp %{__cmake_builddir}/%{name} %{buildroot}%{_libdir}/%{name}/%{name}
 cp %{__cmake_builddir}/%{core} %{buildroot}%{_libdir}/%{name}/%{core}
 cp res/nekoray.ico %{buildroot}%{_datadir}/icons/%{name}.ico
@@ -79,7 +78,6 @@ patchelf --remove-rpath %{buildroot}%{_libdir}/%{name}/%{core}
 
 %files
 %attr(0755, -, -) %{_bindir}/%{name}
-%attr(0755, -, -) %{_libdir}/lib*.so.*
 %attr(0755, -, -) %{_libdir}/%{name}/%{name}
 %attr(0644, -, -) %{_datadir}/icons/%{name}.ico
 %attr(0644, -, -) %{_datadir}/applications/%{name}.desktop

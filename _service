@@ -1,13 +1,9 @@
 <services>
- <service name="download_url">
-   <param name="url">https://api.github.com/repos/mahdi-zarei/nekoray/releases/latest</param> 
- </service>
- <service name="set_version">
-   <param name="fromfile">_service:download_url:latest</param>
-   <param name="regex">.*"tag_name"\s*:\s*"(.*)"</param>
- </service>
- <!--service name="download_files"/-->
- <service name="run">
-   <param name="command">source run.sh</param>
- </service>
+	<service name="download_url">
+		<param name="url">https://raw.githubusercontent.com/bunzuhbu/nekoray/refs/heads/main/version.txt</param>
+	</service>
+	<service name="set_version">
+		<param name="fromfile">_service:download_url:version.txt</param>
+	</service>
+	<service name="download_files" />
 </services>

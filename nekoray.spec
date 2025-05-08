@@ -10,7 +10,6 @@ Source1: https://github.com/bunzuhbu/nekoray/releases/download/%{version}/vendor
 Source2: https://github.com/bunzuhbu/nekoray/releases/download/%{version}/NekoRay-%{version}.Sagernet.SingBox.Version.txt#/Sagernet.SingBox.Version.txt
 Source3: %{name}.desktop
 Source4: %{name}.sh
-Source100: run.sh
 Source101: _service
 
 BuildRequires: rpm_macro(cmake)
